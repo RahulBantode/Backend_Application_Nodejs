@@ -1,0 +1,1421 @@
+{
+	"info": {
+		"_postman_id": "95e73856-02c3-45bc-a0c5-10ded2548dc9",
+		"name": "Backend_Application_nodejs",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "16418828"
+	},
+	"item": [
+		{
+			"name": "registerUser",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstName\": \"pratiksha\",\r\n    \"lastName\": \"patil\",\r\n    \"email\": \"pratikshapatil@gmail.com\",\r\n    \"phone\": \"7777722222\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8090/api/user/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"api",
+						"user",
+						"register"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "success response",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstName\": \"manish\",\r\n    \"lastName\": \"patil\",\r\n    \"email\": \"manishpatil@gmail.com\",\r\n    \"phone\": \"7777733333\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8090/api/user/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"api",
+								"user",
+								"register"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "109"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"6d-NcnGdoLWUGVzm52cf/JNQ3q3DZQ\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 24 Aug 2024 08:02:30 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"registedUser\": {\n        \"firstname\": \"manish\",\n        \"lastname\": \"patil\",\n        \"email\": \"manishpatil@gmail.com\",\n        \"phone\": 7777733333\n    }\n}"
+				},
+				{
+					"name": "Error Response 1",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstName\": \"manish\",\r\n    \"lastName\": \"patil\",\r\n    \"email\": \"manishpatil@gmail.com\",\r\n    \"phone\": \"7777733333\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8090/api/user/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"api",
+								"user",
+								"register"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "103"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"67-531pdV2u7ZPr6WdpJrRuRn0X/yI\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 24 Aug 2024 08:02:45 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"error\": {\n        \"code\": \"USER_ALREADY_EXIST\",\n        \"message\": \"User already registered into the system\"\n    },\n    \"data\": null\n}"
+				},
+				{
+					"name": "Error Response 2",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    // \"firstName\": \"manish\",\r\n    \"lastName\": \"patil\",\r\n    \"email\": \"manishpatil@gmail.com\",\r\n    \"phone\": \"7777733333\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8090/api/user/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"api",
+								"user",
+								"register"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "248"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"f8-vxWrm+drMk/2hoba9jgk6mw8spM\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 24 Aug 2024 08:03:09 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"error\": {\n        \"code\": \"BAD_REQUEST\",\n        \"message\": {\n            \"errors\": [\n                {\n                    \"type\": \"field\",\n                    \"msg\": \"firstName is required\",\n                    \"path\": \"firstName\",\n                    \"location\": \"body\"\n                },\n                {\n                    \"type\": \"field\",\n                    \"msg\": \"firstName should have only letters\",\n                    \"path\": \"firstName\",\n                    \"location\": \"body\"\n                }\n            ]\n        }\n    },\n    \"data\": null\n}"
+				},
+				{
+					"name": "Error Response 3",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstName\": \"manish\",\r\n    \"lastName\": \"patil\",\r\n    \"email\": \"manishpatil@gmail.com\",\r\n    \"phone\": \"Rahul\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8090/api/user/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"api",
+								"user",
+								"register"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "327"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"147-X4zkgGgw/ghYg1omyVMPvRIw37g\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 24 Aug 2024 08:03:36 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"error\": {\n        \"code\": \"BAD_REQUEST\",\n        \"message\": {\n            \"errors\": [\n                {\n                    \"type\": \"field\",\n                    \"value\": \"Rahul\",\n                    \"msg\": \"Invalid phone number, please enter correct phone number\",\n                    \"path\": \"phone\",\n                    \"location\": \"body\"\n                },\n                {\n                    \"type\": \"field\",\n                    \"value\": \"Rahul\",\n                    \"msg\": \"Invalid phone number, please enter correct phone number\",\n                    \"path\": \"phone\",\n                    \"location\": \"body\"\n                }\n            ]\n        }\n    },\n    \"data\": null\n}"
+				}
+			]
+		},
+		{
+			"name": "getUserById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8090/api/user/5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"api",
+						"user",
+						"5"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Success Response",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8090/api/user/5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"api",
+								"user",
+								"5"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "191"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"bf-Pm1QdvGrCsvII4NjTriwQWn1u8k\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 24 Aug 2024 08:04:27 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"user\": {\n        \"id\": 5,\n        \"firstname\": \"ninad\",\n        \"lastname\": \"chaudhary\",\n        \"email\": \"ninadware@gmail.com\",\n        \"phone\": \"3030303030\",\n        \"created_at\": \"2024-08-24T04:12:09.000Z\",\n        \"updated_at\": \"2024-08-24T06:24:24.000Z\"\n    }\n}"
+				},
+				{
+					"name": "Error Response",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8090/api/user/\"5\"",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"api",
+								"user",
+								"\"5\""
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "169"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"a9-Z5cWHqpwWg0yh8V+v+Oc+C9ruaQ\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 24 Aug 2024 08:05:22 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"error\": {\n        \"code\": \"BAD_REQUEST\",\n        \"message\": {\n            \"errors\": [\n                {\n                    \"type\": \"field\",\n                    \"value\": \"\\\"5\\\"\",\n                    \"msg\": \"Please enter correct user id\",\n                    \"path\": \"id\",\n                    \"location\": \"params\"\n                }\n            ]\n        }\n    },\n    \"data\": null\n}"
+				},
+				{
+					"name": "Error Response 2",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8090/api/user/51",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"api",
+								"user",
+								"51"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "80"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"50-6RBaEa/XY95F4kUQCj/QcQ/z0MQ\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 24 Aug 2024 08:18:33 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"error\": {\n        \"code\": \"NOT_FOUND\",\n        \"message\": \"Users not found in system\"\n    },\n    \"data\": null\n}"
+				},
+				{
+					"name": "Error response 3 - as not passed id in req. param",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8090/api/user/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"api",
+								"user",
+								""
+							]
+						}
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "99"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"63-8MeseyzdfZ16WIfOI82G1BAabSM\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 24 Aug 2024 08:18:51 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"error\": {\n        \"code\": \"NOT_FOUND\",\n        \"message\": \"requested resources not found, Invalid route\"\n    },\n    \"data\": null\n}"
+				}
+			]
+		},
+		{
+			"name": "updateUser",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\":11,\r\n    \"firstName\": \"sachin\",\r\n    \"lastName\": \"patil\",\r\n    \"email\": \"patilsachin@gmail.com\",\r\n    \"phone\": \"7667766788\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8090/api/user/update",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"api",
+						"user",
+						"update"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Sucesss Response",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":11,\r\n    \"firstName\": \"sachin\",\r\n    \"lastName\": \"patil\",\r\n    \"email\": \"patilsachin@gmail.com\",\r\n    \"phone\": \"7667766788\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8090/api/user/update",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"api",
+								"user",
+								"update"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "140"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"8c-zVr6tRU2Q1A1u+2BlqxU6VM6ibs\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 24 Aug 2024 08:11:08 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"userData\": {\n        \"firstname\": \"sachin\",\n        \"lastName\": \"patil\",\n        \"email\": \"patilsachin@gmail.com\",\n        \"phone\": 7667766788,\n        \"updated_at\": \"2024-08-24 13:41:08\"\n    }\n}"
+				},
+				{
+					"name": "Error Response 1",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    // \"id\":11,\r\n    \"firstName\": \"sachin\",\r\n    \"lastName\": \"patil\",\r\n    \"email\": \"patilsachin@gmail.com\",\r\n    \"phone\": \"7667766788\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8090/api/user/update",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"api",
+								"user",
+								"update"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "220"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"dc-Ykk/FE5TS2Cov2VgXpx+2ofnpJ8\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 24 Aug 2024 08:14:00 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"error\": {\n        \"code\": \"BAD_REQUEST\",\n        \"message\": {\n            \"errors\": [\n                {\n                    \"type\": \"field\",\n                    \"msg\": \"Invalid value\",\n                    \"path\": \"id\",\n                    \"location\": \"body\"\n                },\n                {\n                    \"type\": \"field\",\n                    \"msg\": \"Please enter correct user id\",\n                    \"path\": \"id\",\n                    \"location\": \"body\"\n                }\n            ]\n        }\n    },\n    \"data\": null\n}"
+				},
+				{
+					"name": "Error Response 2",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":20,\r\n    \"firstName\": \"sachin\",\r\n    \"lastName\": \"patil\",\r\n    \"email\": \"patilsachin@gmail.com\",\r\n    \"phone\": \"7667766788\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8090/api/user/update",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"api",
+								"user",
+								"update"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "80"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"50-6RBaEa/XY95F4kUQCj/QcQ/z0MQ\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 24 Aug 2024 08:15:17 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"error\": {\n        \"code\": \"NOT_FOUND\",\n        \"message\": \"Users not found in system\"\n    },\n    \"data\": null\n}"
+				},
+				{
+					"name": "Error Response 3",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":4\r\n    // \"firstName\": \"sachin\",\r\n    // \"lastName\": \"patil\",\r\n    // \"email\": \"patilsachin@gmail.com\",\r\n    // \"phone\": \"7667766788\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8090/api/user/update",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"api",
+								"user",
+								"update"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "135"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"87-sx0GEsL1S67zpJwGDH18ynQ5GLU\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 24 Aug 2024 08:15:55 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"error\": {\n        \"code\": \"INSUFFICIENT_DATA\",\n        \"message\": \"Insufficient data (firstname/lastname/email/phone) is required to update\"\n    },\n    \"data\": null\n}"
+				}
+			]
+		},
+		{
+			"name": "deleteUser",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8090/api/user/delete/5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"api",
+						"user",
+						"delete",
+						"5"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Success Response",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8090/api/user/delete/5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"api",
+								"user",
+								"delete",
+								"5"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "42"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"2a-BG2+Vz917GWd0XsfjUZBpXZ/e6Y\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 24 Aug 2024 08:19:51 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": \"User ninad chaudhary is deleted\"\n}"
+				},
+				{
+					"name": "Error Response 1",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8090/api/user/delete/\"5\"",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"api",
+								"user",
+								"delete",
+								"\"5\""
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "169"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"a9-Z5cWHqpwWg0yh8V+v+Oc+C9ruaQ\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 24 Aug 2024 08:20:13 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"error\": {\n        \"code\": \"BAD_REQUEST\",\n        \"message\": {\n            \"errors\": [\n                {\n                    \"type\": \"field\",\n                    \"value\": \"\\\"5\\\"\",\n                    \"msg\": \"Please enter correct user id\",\n                    \"path\": \"id\",\n                    \"location\": \"params\"\n                }\n            ]\n        }\n    },\n    \"data\": null\n}"
+				},
+				{
+					"name": "Error Response 2",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8090/api/user/delete/15",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"api",
+								"user",
+								"delete",
+								"15"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "80"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"50-6RBaEa/XY95F4kUQCj/QcQ/z0MQ\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 24 Aug 2024 08:20:36 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"error\": {\n        \"code\": \"NOT_FOUND\",\n        \"message\": \"Users not found in system\"\n    },\n    \"data\": null\n}"
+				}
+			]
+		},
+		{
+			"name": "displayUsers",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": [
+				{
+					"name": "Success Response 1 - filtered list with all payload",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"lastName\" : \"patil\",\r\n    \"firstName\" : \"kunal\",\r\n    \"email\": \"chaudharychirag@gmail.com\",\r\n    \"phone\": \"1111199999\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8090/api/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"api",
+								"users"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "1589"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"635-P1LLIDAQpcpLFNXZV24bhn3Iyj4\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 24 Aug 2024 08:22:29 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"usersFilteredList\": [\n        {\n            \"firstName\": [\n                {\n                    \"id\": 2,\n                    \"firstname\": \"Kunal\",\n                    \"lastname\": \"Chinchole\",\n                    \"email\": \"chincholekunal@gmail.com\",\n                    \"phone\": \"9090909090\",\n                    \"created_at\": \"2024-08-24T03:58:08.000Z\",\n                    \"updated_at\": null\n                },\n                {\n                    \"id\": 3,\n                    \"firstname\": \"Kunal\",\n                    \"lastname\": \"bantode\",\n                    \"email\": \"bantodekunal@gmail.com\",\n                    \"phone\": \"8090908080\",\n                    \"created_at\": \"2024-08-24T04:09:46.000Z\",\n                    \"updated_at\": null\n                }\n            ]\n        },\n        {\n            \"lastName\": [\n                {\n                    \"id\": 4,\n                    \"firstname\": \"sachin\",\n                    \"lastname\": \"patil\",\n                    \"email\": \"patilsachin@gmail.com\",\n                    \"phone\": \"7667766788\",\n                    \"created_at\": \"2024-08-24T04:09:46.000Z\",\n                    \"updated_at\": \"2024-08-24T08:16:20.000Z\"\n                },\n                {\n                    \"id\": 10,\n                    \"firstname\": \"pratik\",\n                    \"lastname\": \"patil\",\n                    \"email\": \"patilpratik@gmail.com\",\n                    \"phone\": \"1111199999\",\n                    \"created_at\": \"2024-08-24T07:42:17.000Z\",\n                    \"updated_at\": null\n                },\n                {\n                    \"id\": 11,\n                    \"firstname\": \"sachin\",\n                    \"lastname\": \"patil\",\n                    \"email\": \"patilsachin@gmail.com\",\n                    \"phone\": \"7667766788\",\n                    \"created_at\": \"2024-08-24T07:46:32.000Z\",\n                    \"updated_at\": \"2024-08-24T08:17:10.000Z\"\n                },\n                {\n                    \"id\": 12,\n                    \"firstname\": \"pratiksha\",\n                    \"lastname\": \"patil\",\n                    \"email\": \"pratikshapatil@gmail.com\",\n                    \"phone\": \"7777722222\",\n                    \"created_at\": \"2024-08-24T07:46:32.000Z\",\n                    \"updated_at\": null\n                },\n                {\n                    \"id\": 13,\n                    \"firstname\": \"manish\",\n                    \"lastname\": \"patil\",\n                    \"email\": \"manishpatil@gmail.com\",\n                    \"phone\": \"7777733333\",\n                    \"created_at\": \"2024-08-24T07:46:32.000Z\",\n                    \"updated_at\": null\n                }\n            ]\n        },\n        {\n            \"email\": [\n                {\n                    \"id\": 7,\n                    \"firstname\": \"chirag\",\n                    \"lastname\": \"chaudhary\",\n                    \"email\": \"chaudharychirag@gmail.com\",\n                    \"phone\": \"4090908040\",\n                    \"created_at\": \"2024-08-24T04:16:44.000Z\",\n                    \"updated_at\": null\n                }\n            ]\n        },\n        {\n            \"phone\": [\n                {\n                    \"id\": 10,\n                    \"firstname\": \"pratik\",\n                    \"lastname\": \"patil\",\n                    \"email\": \"patilpratik@gmail.com\",\n                    \"phone\": \"1111199999\",\n                    \"created_at\": \"2024-08-24T07:42:17.000Z\",\n                    \"updated_at\": null\n                }\n            ]\n        }\n    ]\n}"
+				},
+				{
+					"name": "Success Response 2 - filtered using lastname",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"lastName\" : \"patil\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8090/api/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"api",
+								"users"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "892"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"37c-xL/fqQK0wnVyGhtGDqRIpBH4+ig\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 24 Aug 2024 08:23:18 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"usersFilteredList\": [\n        {\n            \"lastName\": [\n                {\n                    \"id\": 4,\n                    \"firstname\": \"sachin\",\n                    \"lastname\": \"patil\",\n                    \"email\": \"patilsachin@gmail.com\",\n                    \"phone\": \"7667766788\",\n                    \"created_at\": \"2024-08-24T04:09:46.000Z\",\n                    \"updated_at\": \"2024-08-24T08:16:20.000Z\"\n                },\n                {\n                    \"id\": 10,\n                    \"firstname\": \"pratik\",\n                    \"lastname\": \"patil\",\n                    \"email\": \"patilpratik@gmail.com\",\n                    \"phone\": \"1111199999\",\n                    \"created_at\": \"2024-08-24T07:42:17.000Z\",\n                    \"updated_at\": null\n                },\n                {\n                    \"id\": 11,\n                    \"firstname\": \"sachin\",\n                    \"lastname\": \"patil\",\n                    \"email\": \"patilsachin@gmail.com\",\n                    \"phone\": \"7667766788\",\n                    \"created_at\": \"2024-08-24T07:46:32.000Z\",\n                    \"updated_at\": \"2024-08-24T08:17:10.000Z\"\n                },\n                {\n                    \"id\": 12,\n                    \"firstname\": \"pratiksha\",\n                    \"lastname\": \"patil\",\n                    \"email\": \"pratikshapatil@gmail.com\",\n                    \"phone\": \"7777722222\",\n                    \"created_at\": \"2024-08-24T07:46:32.000Z\",\n                    \"updated_at\": null\n                },\n                {\n                    \"id\": 13,\n                    \"firstname\": \"manish\",\n                    \"lastname\": \"patil\",\n                    \"email\": \"manishpatil@gmail.com\",\n                    \"phone\": \"7777733333\",\n                    \"created_at\": \"2024-08-24T07:46:32.000Z\",\n                    \"updated_at\": null\n                }\n            ]\n        }\n    ]\n}"
+				},
+				{
+					"name": "Success Response 3 - Unflitered list (as no payload present)",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    // \"lastName\" : \"patil\",\r\n    // \"firstName\" : \"kunal\",\r\n    // \"email\": \"chaudharychirag@gmail.com\",\r\n    // \"phone\": \"1111199999\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8090/api/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"api",
+								"users"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "1862"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"746-HeuNL8f9AvO7WFLLVNyTjYSJ+4Q\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 24 Aug 2024 08:24:13 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"usersFilteredList\": [\n        {\n            \"id\": 1,\n            \"firstname\": \"Rahul\",\n            \"lastname\": \"Bantode\",\n            \"email\": \"bantoderahul@gmail.com\",\n            \"phone\": \"8624924587\",\n            \"created_at\": \"2024-08-24T03:42:58.000Z\",\n            \"updated_at\": null\n        },\n        {\n            \"id\": 2,\n            \"firstname\": \"Kunal\",\n            \"lastname\": \"Chinchole\",\n            \"email\": \"chincholekunal@gmail.com\",\n            \"phone\": \"9090909090\",\n            \"created_at\": \"2024-08-24T03:58:08.000Z\",\n            \"updated_at\": null\n        },\n        {\n            \"id\": 3,\n            \"firstname\": \"Kunal\",\n            \"lastname\": \"bantode\",\n            \"email\": \"bantodekunal@gmail.com\",\n            \"phone\": \"8090908080\",\n            \"created_at\": \"2024-08-24T04:09:46.000Z\",\n            \"updated_at\": null\n        },\n        {\n            \"id\": 4,\n            \"firstname\": \"sachin\",\n            \"lastname\": \"patil\",\n            \"email\": \"patilsachin@gmail.com\",\n            \"phone\": \"7667766788\",\n            \"created_at\": \"2024-08-24T04:09:46.000Z\",\n            \"updated_at\": \"2024-08-24T08:16:20.000Z\"\n        },\n        {\n            \"id\": 6,\n            \"firstname\": \"paresh\",\n            \"lastname\": \"chaudhary\",\n            \"email\": \"chaudharyparesh@gmail.com\",\n            \"phone\": \"5090908050\",\n            \"created_at\": \"2024-08-24T04:13:31.000Z\",\n            \"updated_at\": null\n        },\n        {\n            \"id\": 7,\n            \"firstname\": \"chirag\",\n            \"lastname\": \"chaudhary\",\n            \"email\": \"chaudharychirag@gmail.com\",\n            \"phone\": \"4090908040\",\n            \"created_at\": \"2024-08-24T04:16:44.000Z\",\n            \"updated_at\": null\n        },\n        {\n            \"id\": 10,\n            \"firstname\": \"pratik\",\n            \"lastname\": \"patil\",\n            \"email\": \"patilpratik@gmail.com\",\n            \"phone\": \"1111199999\",\n            \"created_at\": \"2024-08-24T07:42:17.000Z\",\n            \"updated_at\": null\n        },\n        {\n            \"id\": 11,\n            \"firstname\": \"sachin\",\n            \"lastname\": \"patil\",\n            \"email\": \"patilsachin@gmail.com\",\n            \"phone\": \"7667766788\",\n            \"created_at\": \"2024-08-24T07:46:32.000Z\",\n            \"updated_at\": \"2024-08-24T08:17:10.000Z\"\n        },\n        {\n            \"id\": 12,\n            \"firstname\": \"pratiksha\",\n            \"lastname\": \"patil\",\n            \"email\": \"pratikshapatil@gmail.com\",\n            \"phone\": \"7777722222\",\n            \"created_at\": \"2024-08-24T07:46:32.000Z\",\n            \"updated_at\": null\n        },\n        {\n            \"id\": 13,\n            \"firstname\": \"manish\",\n            \"lastname\": \"patil\",\n            \"email\": \"manishpatil@gmail.com\",\n            \"phone\": \"7777733333\",\n            \"created_at\": \"2024-08-24T07:46:32.000Z\",\n            \"updated_at\": null\n        },\n        {\n            \"id\": 14,\n            \"firstname\": \"rohit\",\n            \"lastname\": \"singh\",\n            \"email\": \"rohitsingh@gmail.com\",\n            \"phone\": \"8989898989\",\n            \"created_at\": \"2024-08-24T07:46:32.000Z\",\n            \"updated_at\": null\n        }\n    ]\n}"
+				},
+				{
+					"name": "Error Response 1 - (req validations)",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"lastName\" : \"patil#\"\r\n    // \"firstName\" : \"kunal\",\r\n    // \"email\": \"chaudharychirag@gmail.com\",\r\n    // \"phone\": \"1111199999\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8090/api/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"api",
+								"users"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "180"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"b4-FxSdC52MjuApBu2XwRVQibH43vA\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 24 Aug 2024 08:24:45 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"error\": {\n        \"code\": \"BAD_REQUEST\",\n        \"message\": {\n            \"errors\": [\n                {\n                    \"type\": \"field\",\n                    \"value\": \"patil#\",\n                    \"msg\": \"lasttName should have only letters\",\n                    \"path\": \"lastName\",\n                    \"location\": \"body\"\n                }\n            ]\n        }\n    },\n    \"data\": null\n}"
+				},
+				{
+					"name": "Error Response 2 - (If no users in DB)",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"lastName\" : \"patil\"\r\n    // \"firstName\" : \"kunal\",\r\n    // \"email\": \"chaudharychirag@gmail.com\",\r\n    // \"phone\": \"1111199999\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8090/api/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"api",
+								"users"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "80"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"50-6RBaEa/XY95F4kUQCj/QcQ/z0MQ\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 24 Aug 2024 08:25:57 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"error\": {\n        \"code\": \"NOT_FOUND\",\n        \"message\": \"Users not found in system\"\n    },\n    \"data\": null\n}"
+				}
+			]
+		}
+	]
+}

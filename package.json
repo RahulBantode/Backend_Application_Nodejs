@@ -1,0 +1,33 @@
+{
+  "name": "backend_application_nodejs",
+  "version": "1.0.0",
+  "description": "Implmentation of REST API's for user management",
+  "main": "server.js",
+  "scripts": {
+    "start": "sequelize db:migrate&&node server.js",
+    "watch": "sequelize db:migrate&&npx nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RahulBantode/Backend_Application_Nodejs.git"
+  },
+  "author": "Rahul Bantode",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RahulBantode/Backend_Application_Nodejs/issues"
+  },
+  "homepage": "https://github.com/RahulBantode/Backend_Application_Nodejs#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "express-validator": "^7.2.0",
+    "moment": "^2.30.1",
+    "mysql2": "^3.11.0",
+    "sequelize": "^6.37.3",
+    "sequelize-cli": "^6.6.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.4"
+  }
+}
