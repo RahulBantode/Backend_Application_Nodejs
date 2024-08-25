@@ -18,14 +18,8 @@ const registerUserService = async (req, res) => {
 
         // Fetching the user with combination of firstname && lastname && email
         const user = await tblUsersMethod.fetchOne({
-            where: { 
-                [Op.and]: [
-                    { email },
-                    { firstname: firstName },
-                    { lastname: lastName }
-                ]
-            },
-            raw: true
+            where: { email },
+            raw:true,
         });
         
         // Error case : If we found the user then it confirm that user was already registered into the system, so we need to restrict
